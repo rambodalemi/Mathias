@@ -1,46 +1,29 @@
 import { Logo } from "@/once-ui/components";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Mathias",
+  lastName: "Pérez",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Artiste, Peintre",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "mathias.perez@free.fr",
+  location: "Europe/Paris",
+  languages: ["Française", "Espagnole"],
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
-  ),
+  title: <>Abonnez-vous à la newsletter de {person.firstName}</>,
+  description: <></>,
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "X",
-    icon: "x",
-    link: "",
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/mathiasperezpeinture/",
   },
   {
     name: "Email",
@@ -55,25 +38,28 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Mathias Pérez</>,
+  underline: <>Artiste, Peintre Français</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
+    title: "Voir tous les œuvres",
+    href: "portfolio",
   },
-  subline: (
-    <>
-      I'm Selene, a design engineer at <Logo icon={false} style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
-  ),
+  subline: <>Né en janvier 1953 à Vaulx en Velin, près de Lyon.</>,
+  monographie: {
+    display: true,
+    title: "Voir la monographie",
+    description:
+      "Téléchargez la monographie de Mathias Pérez pour découvrir en détail son œuvre.",
+    pdf: "/monographie.pdf",
+  },
 };
 
 const about = {
   path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  label: "À propos",
+  title: `À propos – ${person.name}`,
+  description: `Lisez à propos de ${person.name}, ${person.role} basé à ${person.location}.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -82,163 +68,143 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
-    link: "https://cal.com",
+    display: false,
+    link: "",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Expositions Personnelles",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        <ul className="space-y-4 list-disc pl-5">
+          <li><strong>2012</strong> – Le Temps du Regard à l’Hôpital Paul Brousse de Villejuif, présentation par Jeanne Gatard.</li>
+          <li><strong>2009</strong> – Espace Gainville, Aulnay-sous-Bois, exposition et livret avec texte de Christian Prigent.</li>
+          <li><strong>2008</strong> – Gallery Granville ; Galerie / Librairie La 23ème marche à Auvers-sur-Oise.</li>
+          <li><strong>2007</strong> – Atelier Véritable de Marc Pataut, lecture de Prigent et Demarcq, présentation Fusées 12.</li>
+          <li><strong>2006</strong> – Chez Gilles Rozier et Anne-Sophie Dreyfus, présentation Fusées 10 ; Galerie L à Bellème.</li>
+          <li><strong>2003</strong> – Centre Noroît à Arras, lectures (Prigent, Pennequin, Bothereau), catalogue avec texte de Verheggen.</li>
+          <li><strong>1996</strong> – Chapelle de l’Hôtel de Ville de Vesoul ; Galerie G. à Besançon ; Centre Culturel de Vaulx-en-Velin.</li>
+          <li><strong>1995</strong> – Galerie d’Art contemporain d’Auvers-sur-Oise, publication aux éditions de la Différence.</li>
+          <li><strong>1994</strong> – Centre d’Art Contemporain de Bruxelles, texte de Claude Minière.</li>
+          <li><strong>1988</strong> – Musée du Mans, première monographie aux éditions de la Différence.</li>
+          <li><strong>1986</strong> – Galerie Axe Sud, Toulouse.</li>
+          <li><strong>1984</strong> – Galerie Bernard Jordan, Paris ; École des Beaux-Arts de Clermont-Ferrand.</li>
+          <li><strong>1982</strong> – Salle Demangel à Montpellier.</li>
+          <li><strong>1981</strong> – Centre Culturel Français à Bari ; Galerie Regards ; peinture murale à Châtillon-sous-Bagneux ; Villa Médicis à Rome.</li>
+          <li><strong>1980</strong> – Galerie Le Panthographe à Lyon.</li>
+        </ul>
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Expositions de Groupe",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Expositions Collectives",
+        timeframe: "1980 – 2011",
+        role: "Group Shows",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+          <>2011 – La Caverne des Écrivains, Paris</>,
+          <>2010 – Salon Tryptique à Angers ; Atelier National, Marseille</>,
+          <>2009 – Le sens du toucher, CIP Marseille</>,
+          <>2007 – Théâtre du Radeau, Le Mans ; Médiathèque Louis Aragon, Le Mans</>,
+          <>2006 – Galerie Tampon-Ramier, Paris</>,
+          <>2005 – Musée de Dunkerque</>,
+          <>2004 – Beaux-Arts Besançon ; Centre d’Art à l’échelle, Charleville-Mézières</>,
+          <>2003 – Galerie Tom Molenaars, Breda ; Centre Van Gogh, Zundert</>,
+          <>2000 – Centre d’Art Contemporain de l’échelle</>,
+          <>1999 – Médiathèque Louis Aragon, Le Mans</>,
+          <>1986 – Atelier de Christian Sorg ; Galerie AXE SUD</>,
+          <>1985 – Musées du Luxembourg, FRAC</>,
+          <>1984 – Galerie J.-J. Donguy ; Galerie Le Chanjour ; CFDT, Paris ; Galerie L’main, Bruxelles</>,
+          <>1983 – Galerie Jacques Damase ; Galerie AXE Sud ; Centre Georges Pompidou</>,
+          <>1982 – Musée Fabre, Montpellier ; Salon de Mai, Paris ; Muro-Torto à Nantes et Toulouse</>,
+          <>1980 – Galerie Regards, Paris</>,
         ],
         images: [],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Publications Récentes",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "EPHITALAMES",
+        description: <>Texte de Michel Butor</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "ELLE EST Là",
+        description: <>Texte de Raymond Federman</>,
+      },
+      {
+        name: "IL PARTICoLARE No.15/16",
+        description: <>106 pages sur les peintures de Mathias Pérez (2007)</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Monographies",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "2009",
+        description: (
+          <>
+            Philippe Boutibonnes, Claude Minière, Michel Butor, Jacques Demarcq, Hervé Castanet, Pierre Le Pillouër,
+            Rémi Froger, Marc Pataut, Eric Clémens, Jean-Pierre Verheggen, Hubert Lucot, Bernard Noël, Raymond Federman,
+            Charles Pennequin, Christian Prigent, Fabrice Thumerel, Cécile Wajsbrot. Édition Carte Blanche.
+          </>
+        ),
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        title: "1995",
+        description: (
+          <>
+            Claude Minière, Marcelin Pleynet, Eric Clémens, Jean-Pierre Verheggen, Hubert Lucot, Emmanuel Tugny,
+            Christian Prigent. Photo de Willy Ronis. Éditions de la Différence.
+          </>
+        ),
+        images: [],
+      },
+      {
+        title: "1988",
+        description: (
+          <>
+            Bernard Noël et Christian Prigent. Éditions de la Différence.
+          </>
+        ),
+        images: [],
       },
     ],
   },
 };
 
+
 const blog = {
   path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  label: "Textes",
+  title: "Poeésie et Écrits",
+  description: `Découvrez les publications, entretiens et écrits de ${person.name}`,
 };
 
 const work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  label: "Articles",
+  title: `Articles – ${person.name}`,
+  description: `Lisez les articles de ${person.name}`,
 };
 
 const gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  path: "/works",
+  label: "Œuvres",
+  title: `Galerie – ${person.name}`,
+  description: `Une collection d’images et de travaux de ${person.name}`,
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
       alt: "image",
       orientation: "horizontal",
     },
@@ -247,21 +213,7 @@ const gallery = {
       alt: "image",
       orientation: "vertical",
     },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
+    // Add more as needed
   ],
 };
 

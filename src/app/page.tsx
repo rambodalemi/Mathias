@@ -37,22 +37,23 @@ export default function Home() {
       <Column fillWidth paddingY="24" gap="m">
         <Column maxWidth="s">
           {home.featured && (
-          <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
-            <Badge background="brand-alpha-weak" paddingX="12" paddingY="4" onBackground="neutral-strong" textVariant="label-default-s" arrow={false}
-              href={home.featured.href}>
-              <Row paddingY="2">{home.featured.title}</Row>
-            </Badge>
-          </RevealFx>
+            <RevealFx fillWidth horizontal="start" paddingTop="16" paddingBottom="32" paddingLeft="12">
+              <Badge background="brand-alpha-weak" paddingX="12" paddingY="4" onBackground="neutral-strong" textVariant="label-default-s" arrow={false}
+                href={home.featured.href}>
+                <Row paddingY="2">{home.featured.title}</Row>
+              </Badge>
+            </RevealFx>
           )}
           <RevealFx translateY="4" fillWidth horizontal="start" paddingBottom="16">
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
+
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
-              {home.subline}
-            </Text>
+            <Heading wrap="balance" onBackground="neutral-weak" variant="display-strong-xs">
+              {home.underline}
+            </Heading>
           </RevealFx>
           <RevealFx paddingTop="12" delay={0.4} horizontal="start" paddingLeft="12">
             <Button
@@ -80,7 +81,62 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
-      {routes["/blog"] && (
+      <RevealFx translateY="8" delay={0.7}>
+        <Flex
+          background="brand-alpha-weak"
+          padding="24"
+          radius="l"
+          gap="16"
+          vertical="center"
+          direction="column"
+          horizontal="center"
+
+        >
+          <Heading variant="display-strong-s">
+            Découvrez la monographie
+          </Heading>
+          <Text onBackground="neutral-weak" variant="body-default-m">
+            Une analyse détaillée et illustrée de mon parcours, de mes expériences et de mes réflexions – à télécharger en format PDF.
+          </Text>
+          <Button
+            href="/files/livre-perez.pdf"
+            variant="primary"
+            size="m"
+            data-border="rounded"
+          >
+            Voir la monographie
+          </Button>
+        </Flex>
+      </RevealFx>
+
+      <RevealFx translateY="8" delay={0.75}>
+        <Flex
+          background="neutral-alpha-weak"
+          padding="24"
+          radius="l"
+          gap="16"
+          direction="column"
+          horizontal="center"
+        >
+          <Heading variant="display-strong-s">
+            Fusées 22 — Carte Blanche, 2012
+          </Heading>
+          <Text onBackground="neutral-weak" variant="body-default-m">
+            Revue littéraire et poétique d’avant-garde. Disponible en PDF intégral avec couverture.
+          </Text>
+          <Button
+            href="/fusees/fusees-22"
+            variant="secondary"
+            size="m"
+            data-border="rounded"
+          >
+            Voir la page Fusées 22
+          </Button>
+        </Flex>
+      </RevealFx>
+
+
+      {routes["/work"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l" paddingTop="24">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">

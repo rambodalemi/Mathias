@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    
     [
       "@csstools/postcss-global-data",
       {

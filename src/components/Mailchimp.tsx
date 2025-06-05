@@ -138,7 +138,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
             id="mce-EMAIL"
             name="EMAIL"
             type="email"
-            label="Email"
+            label="Mail"
             required
             onChange={(e) => {
               if (error) {
@@ -176,7 +176,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
           <div className="clear">
             <Flex height="48" vertical="center">
               <Button id="mc-embedded-subscribe" value="Subscribe" size="m" fillWidth>
-                Subscribe
+                Abonner
               </Button>
             </Flex>
           </div>

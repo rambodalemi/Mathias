@@ -1,55 +1,32 @@
 ---
-title: "Enable or disable pages for your portfolio"
-summary: "Magic Portfolio's RouteGuard component takes care of conditionally rendering pages based on your settings."
-publishedAt: "2025-04-22"
-tag: "Magic Portfolio"
+title: "Corps à Corps"
+publishedAt: "2003-10-01"
+author: "Michel Butor"
+tag: "Poeme"
 ---
+Nous n’en aurons jamais fini
+de nous émerveiller devant
+le corps de la femme depuis
+douces cavernes prénatales
+jusqu’aux hiéroglyphes des rides
+résumant toute une expérience
+vêtir dévêtir pénétrer
+l’évidemment impénétrable
 
-## Enable or disable pages
+Changeant les mythes et les poses
+l’accompagnement le climat
+la proximité l’abstraction
+mettant au point des alphabets
+pour nous inventer d’autres langues
+afin de chanter et nous taire
+nous glisser entre les surfaces
+de cette chair philosophale
 
-Magic Portfolio's `RouteGuard` component takes care of conditionally rendering pages based on the `routes` object in the `resources/config.js` file.
-
-<CodeBlock
-    marginBottom="16"
-    highlight="6"
-    codeInstances={[
-  {
-    code:
-`const routes = {
-    '/':        true,
-    '/about':   true,
-    '/work':    true,
-    '/blog':    true,
-    '/gallery': false,
-};`,
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
-
-The code above will ensure that the `/gallery` page is not accessible and is not displayed in the navigation.
-
-## Add new pages
-
-When creating a new page, it needs to be added to the `routes` object in the `resources/config.js` file.
-
-<CodeBlock
-    marginBottom="16"
-    highlight="6"
-    codeInstances={[
-  {
-    code:
-`const routes = {
-    '/':        true,
-    '/about':   true,
-    '/work':    true,
-    '/blog':    true,
-    '/gallery': false,
-    '/music': true,
-};`,
-    language: "tsx",
-    label: "src/app/resources/config.js"
-  }
-]} />
-
-The code above will ensure that the `/music` page is accessible. Users will be able to navigate to it after adding it to the navigation menu in the `components/Header.tsx` file.
+Quant au corps de l’homme il faudrait
+devenir femme pour pouvoir
+le faire briller s’épanouir
+le radiographier le lancer
+dans l’espace ou dans la peinture
+la contemplation ruisselante
+au-delà du sexe et des anges
+dans la paix dont nous manquons tant
