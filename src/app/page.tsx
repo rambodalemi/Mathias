@@ -136,11 +136,23 @@ export default function Home() {
       </RevealFx>
 
 
+
+
+        <div className="relative w-full aspect-video rounded-md overflow-hidden">
+          <iframe
+            src="/images/projects/project-01/video-01.mp4"
+            className="w-full h-full"
+            allowFullScreen
+          />
+          <div className="absolute inset-0 z-10" />
+        </div>
+
+
       {routes["/work"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l" paddingTop="24">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              Latest from the blog
+              Derniers textes
             </Heading>
           </Flex>
           <Flex flex={3} paddingX="20">

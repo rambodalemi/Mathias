@@ -236,7 +236,7 @@ export default function CloudinaryGallery() {
               <Icon name="search" className="absolute left-3 text-muted-foreground h-4 w-4" />
               <Input
                 id="image-search"
-                label="Search"
+                label="Chercher"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 w-64"

@@ -123,7 +123,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
               flex={1}
             >
               <Flex horizontal="center" fillWidth minHeight="0">
-                <RouteGuard>{children}</RouteGuard>
+               {children}
               </Flex>
             </Flex>
             <Footer />
