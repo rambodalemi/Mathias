@@ -53,9 +53,14 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
                     <Text
                         variant="label-default-s"
                         onBackground="neutral-weak">
+                        {post.metadata.author}
+                    </Text>
+                    <Text
+                        variant="label-default-s"
+                        onBackground="neutral-weak">
                         {formatDate(post.metadata.publishedAt, false)}
                     </Text>
-                    { post.metadata.tag &&
+                    {post.metadata.tag &&
                         <Tag
                             className="mt-12"
                             label={post.metadata.tag}

@@ -30,10 +30,10 @@ const social = [
     icon: "email",
     link: `mailto:${person.email}`,
   },
-    {
+  {
     name: "Facebook",
     icon: "facebook",
-    link: "https://www.facebook.com/mathiasperezpeinture/",
+    link: "https://www.facebook.com/mathias.perez.313/",
   },
 ];
 
@@ -83,62 +83,106 @@ const about = {
       <>
         <ul className="space-y-4 list-disc pl-5">
           <li>
-            <strong>2012</strong> – Le Temps du Regard à l’Hôpital Paul Brousse
-            de Villejuif, présentation par Jeanne Gatard.
+            <strong>Déc. 1980</strong> – Galerie Le Pantographe à Lyon, texte de
+            présentation de René Deroudille.
           </li>
           <li>
-            <strong>2009</strong> – Espace Gainville, Aulnay-sous-Bois,
-            exposition et livret avec texte de Christian Prigent.
+            <strong>Déc. 1981</strong> – Villa Médicis à Rome, textes du
+            catalogue : Christian Prigent et Jacques Demarcq.
           </li>
           <li>
-            <strong>2008</strong> – Gallery Granville ; Galerie / Librairie La
-            23ème marche à Auvers-sur-Oise.
+            <strong>Déc. 1981</strong> – Galerie Regard à Paris sur proposition
+            du peintre James Guitet.
           </li>
           <li>
-            <strong>2007</strong> – Atelier Véritable de Marc Pataut, lecture de
-            Prigent et Demarcq, présentation Fusées 12.
+            <strong>Mars 1981</strong> – Centre Culturel Français de Bari
+            (Italie), préface de Jean-Pierre Chauvet.
           </li>
           <li>
-            <strong>2006</strong> – Chez Gilles Rozier et Anne-Sophie Dreyfus,
-            présentation Fusées 10 ; Galerie L à Bellème.
+            <strong>Fév. 1982</strong> – Salle Demangel à Montpellier, texte de
+            Jean-Claude Hauc.
           </li>
           <li>
-            <strong>2003</strong> – Centre Noroît à Arras, lectures (Prigent,
-            Pennequin, Bothereau), catalogue avec texte de Verheggen.
+            <strong>Jan. 1984</strong> – École des Beaux-Arts de
+            Clermont-Ferrand, texte d’Alain Robinet.
           </li>
           <li>
-            <strong>1996</strong> – Chapelle de l’Hôtel de Ville de Vesoul ;
-            Galerie G. à Besançon ; Centre Culturel de Vaulx-en-Velin.
+            <strong>Juin 1984</strong> – Galerie Bernard Jordan, Paris.
           </li>
           <li>
-            <strong>1995</strong> – Galerie d’Art contemporain
-            d’Auvers-sur-Oise, publication aux éditions de la Différence.
+            <strong>Déc. 1986</strong> – Galerie Axe Sud, Toulouse.
           </li>
           <li>
-            <strong>1994</strong> – Centre d’Art Contemporain de Bruxelles,
-            texte de Claude Minière.
+            <strong>Juin 1988</strong> – Musée du Mans.
           </li>
           <li>
-            <strong>1988</strong> – Musée du Mans, première monographie aux
-            éditions de la Différence.
+            <strong>Sept. 1994</strong> – Centre d’Art contemporain de
+            Bruxelles, sur l’invitation de Fabienne Dumont, texte de Claude
+            Minière.
           </li>
           <li>
-            <strong>1986</strong> – Galerie Axe Sud, Toulouse.
+            <strong>Sept. 1995</strong> – Galerie d’Art contemporain
+            d’Auvers-sur-Oise.
           </li>
           <li>
-            <strong>1984</strong> – Galerie Bernard Jordan, Paris ; École des
-            Beaux-Arts de Clermont-Ferrand.
+            <strong>Déc. 1996</strong> – Chapelle de l’Hôtel de ville de Vesoul,
+            en collaboration avec la Galerie G de Besançon, texte de Bernard
+            Noël.
+          </li>
+          <li>Galerie G. à Besançon, texte de Charles Pennequin.</li>
+          <li>Centre Culturel de Vaulx-en-Velin, texte de Marcelin Pleynet.</li>
+          <li>
+            <strong>Déc. 2003</strong> – Centre Noroît à Arras, par Philippe
+            Boisnard et Hortance Gauthier.
           </li>
           <li>
-            <strong>1982</strong> – Salle Demangel à Montpellier.
+            <strong>Mai 2006</strong> – Galerie L. dirigée par Fabrice Poggiani.
           </li>
           <li>
-            <strong>1981</strong> – Centre Culturel Français à Bari ; Galerie
-            Regards ; peinture murale à Châtillon-sous-Bagneux ; Villa Médicis à
-            Rome.
+            <strong>Sept. 2006</strong> – Chez Gilles Rozier et Anne Sophie
+            Dreyfus, à Paris, présentation de la revue Fusées n°10, avec lecture
+            de Cécile Wajsbrot.
           </li>
           <li>
-            <strong>1980</strong> – Galerie Le Panthographe à Lyon.
+            <strong>Mars 2008</strong> – Granville Gallery de Catherine Melotte
+            et Jean-Pierre Bruaire.
+          </li>
+          <li>
+            <strong>Avr. 2009</strong> – Espace Gainville à Aulnay-sous-Bois.
+            Commissaire : Michèle Peinturier, catalogue de 12 cartes postales
+            couleurs, préface de Christian Prigent.
+          </li>
+          <li>
+            <strong>Fév. 2012</strong> – Le Temps du Regard, commissaire :
+            Jeanne Gatard, à l’hôpital Brousse de Villejuif.
+          </li>
+          <li>
+            <strong>Avr. 2014</strong> – Galerie Isabelle Mézières à
+            Auvers-sur-Oise. Publication d’un catalogue.
+          </li>
+          <li>
+            <strong>Nov. 2014</strong> – Granville Gallery à Paris. Catalogue
+            *Vers le Dehors*, préface de Bernard Heidsieck, textes de Philippe
+            Boutibonnes, Hubert Lucot et Claude Minière, texte de Daniel Dezeuze
+            en quatrième de couverture.
+          </li>
+          <li>
+            <strong>Déc. 2015</strong> – Villa Daumier à Valmondois (Val d’Oise)
+            par Michel et Tao Guével.
+          </li>
+          <li>
+            <strong>Juin 2021</strong> – Galerie des Sens à Caen (Laure Julien),
+            livret *Le Scribe des contours* en hommage à Bernard Noël.
+          </li>
+          <li>
+            <strong>Mai 2023</strong> – Galerie XXI à Paris, catalogue *Le
+            pinceau sans maître* de Jean-Paul Fargier, préface de Cécile
+            Wajsbrot.
+          </li>
+          <li>
+            <strong>Juil. 2024</strong> – Salle Capitulaire à Goudargues,
+            lecture de Charles Pennequin, hommage à Jean-Pierre Verheggen,
+            commissaire : Jean-Paul Fargier.
           </li>
         </ul>
       </>
@@ -249,7 +293,7 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Textes",
-  title: "Poeésie et Écrits",
+  title: "Poésie et Écrits",
   description: `Découvrez les publications, entretiens et écrits de ${person.name}`,
 };
 

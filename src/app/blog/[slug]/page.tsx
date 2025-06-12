@@ -90,13 +90,26 @@ export default async function Blog({
 
           </Row>
           <Column as="article" fillWidth>
-              <Text
-                as="p"
-                className=""
+            {post.metadata.tag?.includes("Poème") ? (
+              <pre
+                style={{
+                  fontFamily: "'Georgia', serif",
+                  whiteSpace: "pre-wrap",
+                  textAlign: "center",
+                  lineHeight: "1.75",
+                  fontSize: "1.1rem",
+                  color: "var(--once-neutral-medium)",
+                  margin: "var(--static-space-16) 0",
+                }}
               >
-                <CustomMDX source={post.content} />
-              </Text>
+                {post.content}
+              </pre>
+            ) : (
+              <CustomMDX source={post.content} />
+            )}
           </Column>
+
+
           <ScrollToHash />
         </Column>
       </Row>
