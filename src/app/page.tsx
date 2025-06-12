@@ -48,14 +48,14 @@ export default function Home() {
             <Heading wrap="balance" variant="display-strong-l">
               {home.headline}
             </Heading>
-
           </RevealFx>
           <RevealFx translateY="8" delay={0.2} fillWidth horizontal="start" paddingBottom="32">
             <Heading wrap="balance" onBackground="neutral-weak" variant="display-strong-xs">
               {home.underline}
             </Heading>
           </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="start" paddingLeft="12">
+
+          <RevealFx paddingTop="12" delay={0.3} horizontal="start" paddingLeft="12">
             <Button
               id="about"
               data-border="rounded"
@@ -80,6 +80,18 @@ export default function Home() {
       </Column>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
+      </RevealFx>
+      <RevealFx translateY="16" delay={0.7}>
+        <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+          <video width="400" controls>
+            <source src="/images/projects/project-01/video-01.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 z-10" />
+          <Heading wrap="balance" onBackground="neutral-weak" variant="display-default-xs">
+            Bernard Noël.
+          </Heading>
+        </div>
       </RevealFx>
       <RevealFx translateY="8" delay={0.7}>
         <Flex
@@ -134,19 +146,6 @@ export default function Home() {
           </Button>
         </Flex>
       </RevealFx>
-
-
-
-
-        <div className="relative w-full aspect-video rounded-md overflow-hidden">
-          <iframe
-            src="/images/projects/project-01/video-01.mp4"
-            className="w-full h-full"
-            allowFullScreen
-          />
-          <div className="absolute inset-0 z-10" />
-        </div>
-
 
       {routes["/work"] && (
         <Flex fillWidth gap="24" mobileDirection="column">

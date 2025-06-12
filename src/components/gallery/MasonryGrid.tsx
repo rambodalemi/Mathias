@@ -27,6 +27,8 @@ export default function MasonryGrid() {
           src={image.src}
           alt={image.alt}
           className={styles.gridItem}
+          title={image.title}
+          photographer={image.photographer}
         />
       ))}
     </Masonry>

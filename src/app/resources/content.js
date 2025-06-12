@@ -30,6 +30,11 @@ const social = [
     icon: "email",
     link: `mailto:${person.email}`,
   },
+    {
+    name: "Facebook",
+    icon: "facebook",
+    link: "https://www.facebook.com/mathiasperezpeinture/",
+  },
 ];
 
 const home = {
@@ -77,21 +82,64 @@ const about = {
     description: (
       <>
         <ul className="space-y-4 list-disc pl-5">
-          <li><strong>2012</strong> – Le Temps du Regard à l’Hôpital Paul Brousse de Villejuif, présentation par Jeanne Gatard.</li>
-          <li><strong>2009</strong> – Espace Gainville, Aulnay-sous-Bois, exposition et livret avec texte de Christian Prigent.</li>
-          <li><strong>2008</strong> – Gallery Granville ; Galerie / Librairie La 23ème marche à Auvers-sur-Oise.</li>
-          <li><strong>2007</strong> – Atelier Véritable de Marc Pataut, lecture de Prigent et Demarcq, présentation Fusées 12.</li>
-          <li><strong>2006</strong> – Chez Gilles Rozier et Anne-Sophie Dreyfus, présentation Fusées 10 ; Galerie L à Bellème.</li>
-          <li><strong>2003</strong> – Centre Noroît à Arras, lectures (Prigent, Pennequin, Bothereau), catalogue avec texte de Verheggen.</li>
-          <li><strong>1996</strong> – Chapelle de l’Hôtel de Ville de Vesoul ; Galerie G. à Besançon ; Centre Culturel de Vaulx-en-Velin.</li>
-          <li><strong>1995</strong> – Galerie d’Art contemporain d’Auvers-sur-Oise, publication aux éditions de la Différence.</li>
-          <li><strong>1994</strong> – Centre d’Art Contemporain de Bruxelles, texte de Claude Minière.</li>
-          <li><strong>1988</strong> – Musée du Mans, première monographie aux éditions de la Différence.</li>
-          <li><strong>1986</strong> – Galerie Axe Sud, Toulouse.</li>
-          <li><strong>1984</strong> – Galerie Bernard Jordan, Paris ; École des Beaux-Arts de Clermont-Ferrand.</li>
-          <li><strong>1982</strong> – Salle Demangel à Montpellier.</li>
-          <li><strong>1981</strong> – Centre Culturel Français à Bari ; Galerie Regards ; peinture murale à Châtillon-sous-Bagneux ; Villa Médicis à Rome.</li>
-          <li><strong>1980</strong> – Galerie Le Panthographe à Lyon.</li>
+          <li>
+            <strong>2012</strong> – Le Temps du Regard à l’Hôpital Paul Brousse
+            de Villejuif, présentation par Jeanne Gatard.
+          </li>
+          <li>
+            <strong>2009</strong> – Espace Gainville, Aulnay-sous-Bois,
+            exposition et livret avec texte de Christian Prigent.
+          </li>
+          <li>
+            <strong>2008</strong> – Gallery Granville ; Galerie / Librairie La
+            23ème marche à Auvers-sur-Oise.
+          </li>
+          <li>
+            <strong>2007</strong> – Atelier Véritable de Marc Pataut, lecture de
+            Prigent et Demarcq, présentation Fusées 12.
+          </li>
+          <li>
+            <strong>2006</strong> – Chez Gilles Rozier et Anne-Sophie Dreyfus,
+            présentation Fusées 10 ; Galerie L à Bellème.
+          </li>
+          <li>
+            <strong>2003</strong> – Centre Noroît à Arras, lectures (Prigent,
+            Pennequin, Bothereau), catalogue avec texte de Verheggen.
+          </li>
+          <li>
+            <strong>1996</strong> – Chapelle de l’Hôtel de Ville de Vesoul ;
+            Galerie G. à Besançon ; Centre Culturel de Vaulx-en-Velin.
+          </li>
+          <li>
+            <strong>1995</strong> – Galerie d’Art contemporain
+            d’Auvers-sur-Oise, publication aux éditions de la Différence.
+          </li>
+          <li>
+            <strong>1994</strong> – Centre d’Art Contemporain de Bruxelles,
+            texte de Claude Minière.
+          </li>
+          <li>
+            <strong>1988</strong> – Musée du Mans, première monographie aux
+            éditions de la Différence.
+          </li>
+          <li>
+            <strong>1986</strong> – Galerie Axe Sud, Toulouse.
+          </li>
+          <li>
+            <strong>1984</strong> – Galerie Bernard Jordan, Paris ; École des
+            Beaux-Arts de Clermont-Ferrand.
+          </li>
+          <li>
+            <strong>1982</strong> – Salle Demangel à Montpellier.
+          </li>
+          <li>
+            <strong>1981</strong> – Centre Culturel Français à Bari ; Galerie
+            Regards ; peinture murale à Châtillon-sous-Bagneux ; Villa Médicis à
+            Rome.
+          </li>
+          <li>
+            <strong>1980</strong> – Galerie Le Panthographe à Lyon.
+          </li>
         </ul>
       </>
     ),
@@ -108,18 +156,33 @@ const about = {
           <>2011 – La Caverne des Écrivains, Paris</>,
           <>2010 – Salon Tryptique à Angers ; Atelier National, Marseille</>,
           <>2009 – Le sens du toucher, CIP Marseille</>,
-          <>2007 – Théâtre du Radeau, Le Mans ; Médiathèque Louis Aragon, Le Mans</>,
+          <>
+            2007 – Théâtre du Radeau, Le Mans ; Médiathèque Louis Aragon, Le
+            Mans
+          </>,
           <>2006 – Galerie Tampon-Ramier, Paris</>,
           <>2005 – Musée de Dunkerque</>,
-          <>2004 – Beaux-Arts Besançon ; Centre d’Art à l’échelle, Charleville-Mézières</>,
+          <>
+            2004 – Beaux-Arts Besançon ; Centre d’Art à l’échelle,
+            Charleville-Mézières
+          </>,
           <>2003 – Galerie Tom Molenaars, Breda ; Centre Van Gogh, Zundert</>,
           <>2000 – Centre d’Art Contemporain de l’échelle</>,
           <>1999 – Médiathèque Louis Aragon, Le Mans</>,
           <>1986 – Atelier de Christian Sorg ; Galerie AXE SUD</>,
           <>1985 – Musées du Luxembourg, FRAC</>,
-          <>1984 – Galerie J.-J. Donguy ; Galerie Le Chanjour ; CFDT, Paris ; Galerie L’main, Bruxelles</>,
-          <>1983 – Galerie Jacques Damase ; Galerie AXE Sud ; Centre Georges Pompidou</>,
-          <>1982 – Musée Fabre, Montpellier ; Salon de Mai, Paris ; Muro-Torto à Nantes et Toulouse</>,
+          <>
+            1984 – Galerie J.-J. Donguy ; Galerie Le Chanjour ; CFDT, Paris ;
+            Galerie L’main, Bruxelles
+          </>,
+          <>
+            1983 – Galerie Jacques Damase ; Galerie AXE Sud ; Centre Georges
+            Pompidou
+          </>,
+          <>
+            1982 – Musée Fabre, Montpellier ; Salon de Mai, Paris ; Muro-Torto à
+            Nantes et Toulouse
+          </>,
           <>1980 – Galerie Regards, Paris</>,
         ],
         images: [],
@@ -152,9 +215,11 @@ const about = {
         title: "2009",
         description: (
           <>
-            Philippe Boutibonnes, Claude Minière, Michel Butor, Jacques Demarcq, Hervé Castanet, Pierre Le Pillouër,
-            Rémi Froger, Marc Pataut, Eric Clémens, Jean-Pierre Verheggen, Hubert Lucot, Bernard Noël, Raymond Federman,
-            Charles Pennequin, Christian Prigent, Fabrice Thumerel, Cécile Wajsbrot. Édition Carte Blanche.
+            Philippe Boutibonnes, Claude Minière, Michel Butor, Jacques Demarcq,
+            Hervé Castanet, Pierre Le Pillouër, Rémi Froger, Marc Pataut, Eric
+            Clémens, Jean-Pierre Verheggen, Hubert Lucot, Bernard Noël, Raymond
+            Federman, Charles Pennequin, Christian Prigent, Fabrice Thumerel,
+            Cécile Wajsbrot. Édition Carte Blanche.
           </>
         ),
         images: [],
@@ -163,8 +228,9 @@ const about = {
         title: "1995",
         description: (
           <>
-            Claude Minière, Marcelin Pleynet, Eric Clémens, Jean-Pierre Verheggen, Hubert Lucot, Emmanuel Tugny,
-            Christian Prigent. Photo de Willy Ronis. Éditions de la Différence.
+            Claude Minière, Marcelin Pleynet, Eric Clémens, Jean-Pierre
+            Verheggen, Hubert Lucot, Emmanuel Tugny, Christian Prigent. Photo de
+            Willy Ronis. Éditions de la Différence.
           </>
         ),
         images: [],
@@ -172,16 +238,13 @@ const about = {
       {
         title: "1988",
         description: (
-          <>
-            Bernard Noël et Christian Prigent. Éditions de la Différence.
-          </>
+          <>Bernard Noël et Christian Prigent. Éditions de la Différence.</>
         ),
         images: [],
       },
     ],
   },
 };
-
 
 const blog = {
   path: "/blog",
@@ -204,15 +267,63 @@ const gallery = {
   description: `Une collection d’images et de travaux de ${person.name}`,
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
+      src: "/images/gallery/1.jpg",
+      alt: "image",
+      orientation: "horizontal",
+      title: "Gallertie Méziéres 2014",
+      photographer: "Christophe Méziéres",
+    },
+    {
+      src: "/images/gallery/2.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
+      src: "/images/gallery/3.jpg",
+      alt: "image",
+      orientation: "horizontal",
+      title: "Gallertie Méziéres 2014",
+      photographer: "Christophe Méziéres",
+    },
+    {
+      src: "/images/gallery/4.jpg",
+      alt: "image",
+      orientation: "horizontal",
+      title: "Gallertie Méziéres 2014",
+      photographer: "Christophe Méziéres",
+    },
+    {
+      src: "/images/gallery/5.jpg",
+      alt: "image",
+      orientation: "horizontal",
+      title: "Gallertie Méziéres 2014",
+      photographer: "Christophe Méziéres",
+    },
+    {
+      src: "/images/gallery/6.jpg",
       alt: "image",
       orientation: "vertical",
     },
+    {
+      src: "/images/gallery/7.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/8.jpg",
+      alt: "image",
+      orientation: "horizontal",
+      title: "Gallertie Méziéres 2014",
+      photographer: "Christophe Méziéres",
+    },
+    {
+      src: "/images/gallery/9.jpg",
+      alt: "image",
+      orientation: "horizontal",
+      title: "Gallertie Méziéres 2014",
+      photographer: "Christophe Méziéres",
+    },
+
     // Add more as needed
   ],
 };

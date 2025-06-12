@@ -42,6 +42,7 @@ import {
   FaLinkedin,
   FaX,
   FaInstagram,
+  FaFacebook
 } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
@@ -74,6 +75,7 @@ export const iconLibrary: Record<string, IconType> = {
   github: FaGithub,
   linkedin: FaLinkedin,
   instagram: FaInstagram,
+  facebook: FaFacebook,
   x: FaX,
   clipboard: HiClipboard,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,

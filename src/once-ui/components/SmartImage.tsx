@@ -9,6 +9,8 @@ export interface SmartImageProps extends React.ComponentProps<typeof Flex> {
   aspectRatio?: string;
   height?: number;
   alt?: string;
+  title?: string;
+  photographer?: string;
   isLoading?: boolean;
   objectFit?: CSSProperties["objectFit"];
   enlarge?: boolean;
@@ -22,6 +24,8 @@ const SmartImage: React.FC<SmartImageProps> = ({
   aspectRatio,
   height,
   alt = "",
+  title,
+  photographer,
   isLoading = false,
   objectFit = "cover",
   enlarge = false,
@@ -174,6 +178,22 @@ const SmartImage: React.FC<SmartImageProps> = ({
         )}
       </Flex>
 
+      {/* Caption under image */}
+      {(title || photographer) && !isLoading && (
+        <div
+          style={{
+            marginTop: "0.5rem",
+            fontSize: "0.875rem",
+            color: "#666",
+            textAlign: "center",
+            lineHeight: "1.4",
+          }}
+        >
+          {title && <div>{title}</div>}
+          {photographer && <div style={{ fontStyle: "italic" }}>📷 {photographer}</div>}
+        </div>
+      )}
+
       {isEnlarged && enlarge && (
         <Flex
           horizontal="center"
@@ -225,6 +245,26 @@ const SmartImage: React.FC<SmartImageProps> = ({
                   objectFit: "contain",
                 }}
               />
+            )}
+            {(title || photographer) && (
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "2rem",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  color: "white",
+                  backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  padding: "0.5rem 1rem",
+                  borderRadius: "0.5rem",
+                  fontSize: "0.9rem",
+                  textAlign: "center",
+                  lineHeight: "1.4",
+                }}
+              >
+                {title && <div>{title}</div>}
+                {photographer && <div style={{ fontStyle: "italic" }}>📷 {photographer}</div>}
+              </div>
             )}
           </Flex>
         </Flex>
