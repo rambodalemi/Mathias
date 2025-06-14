@@ -78,20 +78,43 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+      <RevealFx translateY="16" delay={0.5}>
+        <Projects range={[2]} />
+      </RevealFx>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
       <RevealFx translateY="16" delay={0.7}>
-        <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
-          <video width="400" controls>
-            <source src="/images/projects/project-01/video-01.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="absolute inset-0 z-10" />
-          <Heading wrap="balance" onBackground="neutral-weak" variant="display-default-xs">
-            Bernard Noël.
-          </Heading>
-        </div>
+        <Flex
+          background="neutral-alpha-weak"
+          padding="24"
+          radius="l"
+          gap="16"
+          direction="column"
+          horizontal="center"
+        >
+          <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+            <video width="400" controls>
+              <source src="/images/projects/project-01/video-01.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 z-10" />
+            <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
+              Bernard Noël.
+            </Heading>
+          </div>
+          <Text onBackground="neutral-weak" variant="body-default-m">
+            Entretien de Mathias Pérez avec Marc Pataut et Bernard Noël
+          </Text>
+          <Button
+            href="/files/Entretien-bn.pdf"
+            variant="secondary"
+            size="m"
+            data-border="rounded"
+          >
+            Voir L'entretien en PDF
+          </Button>
+        </Flex>
       </RevealFx>
       <RevealFx translateY="8" delay={0.7}>
         <Flex
@@ -159,7 +182,7 @@ export default function Home() {
           </Flex>
         </Flex>
       )}
-      <Projects range={[2]} />
+
       {newsletter.display && <Mailchimp newsletter={newsletter} />}
     </Column>
   );
