@@ -62,8 +62,8 @@ const home = {
 
 const about = {
   path: "/about",
-  label: "À propos",
-  title: `À propos – ${person.name}`,
+  label: "CV",
+  title: `CV – ${person.name}`,
   description: `Lisez à propos de ${person.name}, ${person.role} basé à ${person.location}.`,
   tableOfContent: {
     display: true,
@@ -311,16 +311,11 @@ const gallery = {
   description: `Une collection d’images et de travaux de ${person.name}`,
   images: [
     {
-      src: "/images/gallery/1.jpg",
+      src: "/images/gallery/Picture1.jpg",
       alt: "image",
       orientation: "horizontal",
       title: "Galerie Méziéres 2014",
       photographer: "Christophe Méziéres",
-    },
-    {
-      src: "/images/gallery/2.jpg",
-      alt: "image",
-      orientation: "horizontal",
     },
     {
       src: "/images/gallery/3.jpg",
@@ -344,16 +339,6 @@ const gallery = {
       photographer: "Christophe Méziéres",
     },
     {
-      src: "/images/gallery/6.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/7.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
       src: "/images/gallery/8.jpg",
       alt: "image",
       orientation: "horizontal",
@@ -367,8 +352,44 @@ const gallery = {
       title: "Galerie Méziéres 2014",
       photographer: "Christophe Méziéres",
     },
+    {
+      src: "/images/gallery/Picture3.jpg",
+      alt: "image",
+      orientation: "horizontal",
+      title: "Galerie Méziéres 2014",
+      photographer: "Christophe Méziéres",
+    },
+    {
+      src: "/images/gallery/Picture2.jpg",
+      alt: "image",
+      orientation: "horizontal",
+      title: "Galerie Méziéres 2014",
+      photographer: "Christophe Méziéres",
+    },
 
     // Add more as needed
+  ],
+  images2: [
+    {
+      src: "/images/gallery/IMG_3053.jpg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/IMG_3054.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/IMG_3058.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/IMG_3074.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
   ],
 };
 

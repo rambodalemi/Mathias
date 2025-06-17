@@ -176,10 +176,10 @@ export default function About() {
                 )}
                 <Button
                   size="s"
-                  href="/files/Mathias-Pérez.pdf"
+                  href="/files/BernardNoël _M.P.pdf"
                   variant="secondary"
                 >
-                   Voir CV
+                   Voir le scribe des contours
                 </Button>
               </Flex>
             )}

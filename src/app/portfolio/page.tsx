@@ -1,8 +1,9 @@
-import { Flex } from "@/once-ui/components";
+import { Flex, Text } from "@/once-ui/components";
 import MasonryGrid from "@/components/gallery/MasonryGrid";
 import { baseURL } from "@/app/resources";
 import { gallery, person } from "@/app/resources/content";
 import { Meta, Schema } from "@/once-ui/modules";
+import MasonryGrid2 from "@/components/gallery/MasonryGrid2";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -16,7 +17,17 @@ export async function generateMetadata() {
 
 export default function Gallery() {
   return (
-    <Flex maxWidth="l">
+
+    <Flex
+      as="header"
+      fillWidth
+      horizontal="center"
+      paddingY="l"
+      paddingX="104"
+      gap="l"
+      direction="column"
+      align="center"
+    >
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -30,7 +41,22 @@ export default function Gallery() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      <Text
+        size="l"
+        variant="heading-default-xl"
+      >
+        Galerie Isabelle Mézières en 2014.
+        <br />
+        Photographies : Christophe Mézières
+      </Text>
       <MasonryGrid />
+
+      <Text variant="heading-default-xl">
+        Galerie XXI en 2023
+        <br />
+        Michel Blachère
+      </Text>
+      <MasonryGrid2 />
     </Flex>
   );
 }

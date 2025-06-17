@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row } from "@/once-ui/components";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Column, Badge, Row, SmartImage } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
 import { baseURL, routes } from "@/app/resources";
@@ -8,6 +8,7 @@ import { home, about, person, newsletter } from "@/app/resources/content";
 import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -84,6 +85,24 @@ export default function Home() {
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
+      <Flex
+        background="neutral-alpha-weak"
+        padding="24"
+        radius="l"
+        gap="16"
+        direction="column"
+        horizontal="center"
+      >
+        <Text onBackground="neutral-weak" variant="body-default-l">
+          Bernard Noël et Mathias Pérez, mercredi 8 juin 2016
+        </Text>
+        <Image
+          src="/images/gallery/Pataut_Noël.JPG"
+          alt="Pataut"
+          width={1600}
+          height={700}
+        />
+      </Flex>
       <RevealFx translateY="16" delay={0.7}>
         <Flex
           background="neutral-alpha-weak"
