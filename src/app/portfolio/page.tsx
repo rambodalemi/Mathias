@@ -23,7 +23,7 @@ export default function Gallery() {
       fillWidth
       horizontal="center"
       paddingY="l"
-      paddingX="104"
+      paddingX="160"
       gap="l"
       direction="column"
       align="center"

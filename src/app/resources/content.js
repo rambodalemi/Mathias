@@ -371,22 +371,22 @@ const gallery = {
   ],
   images2: [
     {
-      src: "/images/gallery/IMG_3053.jpg",
+      src: "/images/gallery/carton-invitaion--perez-GXXI-web.png",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/IMG_3054.jpg",
+      src: "/images/gallery/CMEZ4343.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/IMG_3058.jpg",
+      src: "/images/gallery/IMG_2994.jpeg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/IMG_3074.jpg",
+      src: "/images/gallery/30.tiff",
       alt: "image",
       orientation: "vertical",
     },
