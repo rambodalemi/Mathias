@@ -386,7 +386,27 @@ const gallery = {
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/30.tiff",
+      src: "/images/gallery/IMG_3062.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/IMG_3063.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/IMG_3060.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/IMG_3065.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/IMG_3069.jpg",
       alt: "image",
       orientation: "vertical",
     },
