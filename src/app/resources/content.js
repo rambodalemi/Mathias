@@ -188,51 +188,7 @@ const about = {
       </>
     ),
   },
-  work: {
-    display: true,
-    title: "Expositions de Groupe",
-    experiences: [
-      {
-        company: "Expositions Collectives",
-        timeframe: "1980 – 2011",
-        role: "Group Shows",
-        achievements: [
-          <>2011 – La Caverne des Écrivains, Paris</>,
-          <>2010 – Salon Tryptique à Angers ; Atelier National, Marseille</>,
-          <>2009 – Le sens du toucher, CIP Marseille</>,
-          <>
-            2007 – Théâtre du Radeau, Le Mans ; Médiathèque Louis Aragon, Le
-            Mans
-          </>,
-          <>2006 – Galerie Tampon-Ramier, Paris</>,
-          <>2005 – Musée de Dunkerque</>,
-          <>
-            2004 – Beaux-Arts Besançon ; Centre d’Art à l’échelle,
-            Charleville-Mézières
-          </>,
-          <>2003 – Galerie Tom Molenaars, Breda ; Centre Van Gogh, Zundert</>,
-          <>2000 – Centre d’Art Contemporain de l’échelle</>,
-          <>1999 – Médiathèque Louis Aragon, Le Mans</>,
-          <>1986 – Atelier de Christian Sorg ; Galerie AXE SUD</>,
-          <>1985 – Musées du Luxembourg, FRAC</>,
-          <>
-            1984 – Galerie J.-J. Donguy ; Galerie Le Chanjour ; CFDT, Paris ;
-            Galerie L’main, Bruxelles
-          </>,
-          <>
-            1983 – Galerie Jacques Damase ; Galerie AXE Sud ; Centre Georges
-            Pompidou
-          </>,
-          <>
-            1982 – Musée Fabre, Montpellier ; Salon de Mai, Paris ; Muro-Torto à
-            Nantes et Toulouse
-          </>,
-          <>1980 – Galerie Regards, Paris</>,
-        ],
-        images: [],
-      },
-    ],
-  },
+
   studies: {
     display: true,
     title: "Publications Récentes",
@@ -407,6 +363,31 @@ const gallery = {
     },
     {
       src: "/images/gallery/IMG_3069.jpg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/s1.jpeg",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/s2.jpeg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/s3.jpeg",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/s4.tiff",
+      alt: "image",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/s5.jpeg",
       alt: "image",
       orientation: "vertical",
     },
