@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "@/components/mdx";
 import { getPosts } from "@/app/utils/utils";
-import { AvatarGroup, Button, Column, Heading, HeadingNav, Icon, Row, Text } from "@/once-ui/components";
+import { AvatarGroup, Button, Column, Heading, HeadingNav, Icon, Row, SmartImage, Text } from "@/once-ui/components";
 import { about, blog, person, baseURL } from "@/app/resources";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
@@ -90,6 +90,15 @@ export default async function Blog({
 
           </Row>
           <Column as="article" fillWidth>
+            <SmartImage
+              sizes="(max-width: 560px) 100vw, 50vw"
+              priority
+              aspectRatio="3 / 4"
+              radius="m"
+              alt="image"
+              src={Array.isArray(post.metadata.images) ? post.metadata.images[0] : post.metadata.images}
+
+            />
             {post.metadata.tag?.includes("Poème") ? (
               <pre
                 style={{

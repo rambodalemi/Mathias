@@ -11,14 +11,14 @@ import {
 } from "@/once-ui/components";
 
 interface ProjectCardProps {
-  href: string;
+  href?: string;
   priority?: boolean;
   images: string[];
-  title: string;
-  content: string;
-  description: string;
-  avatars: { src: string }[];
-  link: string;
+  title?: string;
+  content?: string;
+  description?: string;
+  avatars?: { src: string }[];
+  link?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -36,7 +36,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         sizes="(max-width: 960px) 100vw, 960px"
         images={images.map((image) => ({
           src: image,
-          alt: title,
+          alt: title ?? "",
         }))}
       />
       <Flex
@@ -54,9 +54,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </Heading>
           </Flex>
         )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
+        {((avatars && avatars.length > 0) || description?.trim() || content?.trim()) && (
           <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
+            {(avatars?.length ?? 0) > 0 && <AvatarGroup avatars={avatars!} size="m" reverse />}
             {description?.trim() && (
               <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
                 {description}
