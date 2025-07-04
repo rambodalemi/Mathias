@@ -30,7 +30,7 @@ export default function Fusees22Page() {
                     href="/files/22-fusees-couv.pdf"
                     data-border="rounded"
                 >
-                    Télécharger les couvertures en PDF
+                    Télécharger la couverture en PDF
                 </Button>
             </Flex>
 

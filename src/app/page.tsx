@@ -192,23 +192,11 @@ export default function Home() {
           size="m"
           data-border="rounded"
         >
-          Voir la page Fusées 22
+          Voir le sommaire
         </Button>
       </Flex>
-      {routes["/work"] && (
-        <Flex fillWidth gap="24" mobileDirection="column">
-          <Flex flex={1} paddingLeft="l" paddingTop="24">
-            <Heading as="h2" variant="display-strong-xs" wrap="balance">
-              Derniers textes
-            </Heading>
-          </Flex>
-          <Flex flex={3} paddingX="20">
-            <Posts range={[1, 2]} columns="2" />
-          </Flex>
-        </Flex>
-      )}
 
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
+      {/* {newsletter.display && <Mailchimp newsletter={newsletter} />} */}
     </Column>
   );
 }

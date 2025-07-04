@@ -190,26 +190,25 @@ export default function About() {
             padding="24"
             radius="l"
             gap="16"
+            marginBottom="64"
             direction="column"
             horizontal="center"
           >
             <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/N4lRCsGrhfQ"
-                title="YouTube video player"
+              <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1365624737863987%2F&show_text=false&width=267&t=0"
+                width="267"
+                height="476"
+                scrolling="no"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
               />
               <div className="absolute inset-0 z-10" />
               <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
-                Atelier
+                Goudargues
               </Heading>
             </div>
             <Text onBackground="neutral-weak" variant="body-default-m">
-              Atelier de Mathias Pérez - Auvers-sur-Oise, 2025
+              Jean-Paul Fargier invite Charles Pennequin pour un hommage à Jean-Pierre Verheggen
             </Text>
           </Flex>
           {about.studies.display && (
