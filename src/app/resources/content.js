@@ -47,7 +47,7 @@ const home = {
   underline: <>Artiste, Peintre Français</>,
   featured: {
     display: true,
-    title: "Voir tous les œuvres",
+    title: "Voir tous les Galeries",
     href: "portfolio",
   },
   subline: <>Né en janvier 1953 à Vaulx en Velin, près de Lyon.</>,
@@ -262,7 +262,7 @@ const work = {
 
 const gallery = {
   path: "/works",
-  label: "Œuvres",
+  label: "Galeries",
   title: `Galerie – ${person.name}`,
   description: `Une collection d’images et de travaux de ${person.name}`,
   images: [

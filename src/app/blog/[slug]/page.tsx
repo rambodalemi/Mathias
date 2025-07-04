@@ -90,15 +90,36 @@ export default async function Blog({
 
           </Row>
           <Column as="article" fillWidth>
-            <SmartImage
-              sizes="(max-width: 560px) 100vw, 50vw"
-              priority
-              aspectRatio="3 / 4"
-              radius="m"
-              alt="image"
-              src={Array.isArray(post.metadata.images) ? post.metadata.images[0] : post.metadata.images}
-
-            />
+            {post.metadata.images && Array.isArray(post.metadata.images) && post.metadata.images.length > 0 && (
+              <>
+                <SmartImage
+                  sizes="(max-width: 560px) 100vw, 50vw"
+                  priority
+                  aspectRatio="3 / 4"
+                  radius="m"
+                  alt="image"
+                  src={post.metadata.images[0]}
+                />
+                <SmartImage
+                  sizes="(max-width: 560px) 100vw, 50vw"
+                  priority
+                  aspectRatio="3 / 4"
+                  radius="m"
+                  alt="image"
+                  src={post.metadata.images[1]}
+                />
+              </>
+            )}
+            {post.metadata.images && !Array.isArray(post.metadata.images) && (
+              <SmartImage
+                sizes="(max-width: 560px) 100vw, 50vw"
+                priority
+                aspectRatio="3 / 4"
+                radius="m"
+                alt="image"
+                src={post.metadata.images}
+              />
+            )}
             {post.metadata.tag?.includes("Poème") ? (
               <pre
                 style={{

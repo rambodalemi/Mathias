@@ -174,7 +174,7 @@ export default function About() {
                   href="/files/BernardNoël _M.P.pdf"
                   variant="secondary"
                 >
-                   Voir le scribe des contours
+                  Voir le scribe des contours
                 </Button>
               </Flex>
             )}
@@ -185,7 +185,33 @@ export default function About() {
               {about.intro.description}
             </Column>
           )}
-
+          <Flex
+            background="neutral-alpha-weak"
+            padding="24"
+            radius="l"
+            gap="16"
+            direction="column"
+            horizontal="center"
+          >
+            <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/N4lRCsGrhfQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+              <div className="absolute inset-0 z-10" />
+              <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
+                Atelier
+              </Heading>
+            </div>
+            <Text onBackground="neutral-weak" variant="body-default-m">
+              Atelier de Mathias Pérez - Auvers-sur-Oise, 2025
+            </Text>
+          </Flex>
           {about.studies.display && (
             <>
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
@@ -255,7 +281,9 @@ export default function About() {
             </>
           )}
         </Column>
+
       </Flex>
+
     </Column>
   );
 }
