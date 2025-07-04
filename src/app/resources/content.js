@@ -33,7 +33,7 @@ const social = [
   {
     name: "Facebook",
     icon: "facebook",
-    link: "https://www.facebook.com/mathias.perez.313/",
+    link: "https://www.facebook.com/mathias.perez.77920526",
   },
 ];
 
