@@ -208,7 +208,7 @@ export default function Home() {
         </Button>
       </Flex>
 
-      {/* {newsletter.display && <Mailchimp newsletter={newsletter} />} */}
+      {/*  */}
     </Column>
   );
 }

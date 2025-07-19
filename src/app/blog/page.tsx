@@ -34,13 +34,20 @@ export default function Blog() {
       <Heading marginBottom="l" variant="display-strong-s">
         {blog.title}
       </Heading>
+      <iframe
+        src="/files/respconsp.pdf"
+        width="100%"
+        height="600px"
+        style={{ border: "none", margin: "2rem 0" }}
+        title="respconsp.pdf"
+      />
       <Column
-				fillWidth flex={1}>
-				<Posts range={[1,1]} thumbnail direction="column"/>
-				<Posts range={[2,3]} thumbnail/>
-				<Posts range={[4]} columns="2"/>
-			</Column>
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
+        fillWidth flex={1}>
+        <Posts range={[1, 1]} thumbnail direction="column" />
+        <Posts range={[2, 3]} thumbnail />
+        <Posts range={[4]} columns="2" />
+      </Column>
+
     </Column>
   );
 }
