@@ -37,12 +37,6 @@ export default function Home() {
       />
       <Column fillWidth paddingY="24" gap="m">
         <Column maxWidth="s">
-          {home.featured && (
-            <Badge background="brand-alpha-weak" paddingX="12" paddingY="4" onBackground="neutral-strong" textVariant="label-default-s" arrow={false}
-              href={home.featured.href}>
-              <Row paddingY="2">{home.featured.title}</Row>
-            </Badge>
-          )}
           <Heading wrap="balance" variant="display-strong-l">
             {home.headline}
           </Heading>
@@ -98,6 +92,27 @@ export default function Home() {
           Atelier de Mathias Pérez - Auvers-sur-Oise, 2025
         </Text>
       </Flex>
+      <Flex
+        background="neutral-alpha-weak"
+        padding="24"
+        radius="l"
+        gap="16"
+        direction="column"
+        horizontal="center"
+      >
+        <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/cea4JDUMmcY?si=er0WgBx-CSwhdvo7"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+          <div className="absolute inset-0 z-10" />
+        </div>
+      </Flex>
       <Projects range={[1, 1]} />
       <Flex
         background="neutral-alpha-weak"
@@ -126,10 +141,15 @@ export default function Home() {
         horizontal="center"
       >
         <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
-          <video width="400" controls>
-            <source src="/images/projects/project-01/video-01.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/i_DtqeGcaKM?si=6m_Lyr-4sRlQzkpw"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
           <div className="absolute inset-0 z-10" />
           <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
             Bernard Noël.
@@ -138,14 +158,6 @@ export default function Home() {
         <Text onBackground="neutral-weak" variant="body-default-m">
           Entretien de Mathias Pérez avec Marc Pataut et Bernard Noël
         </Text>
-        <Button
-          href="/files/Entretien-bn.pdf"
-          variant="secondary"
-          size="m"
-          data-border="rounded"
-        >
-          Voir L'entretien en PDF
-        </Button>
       </Flex>
       <Flex
         background="brand-alpha-weak"

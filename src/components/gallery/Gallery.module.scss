@@ -12,3 +12,10 @@
 .gridItem {
     margin-bottom: var(--static-space-16);
 }
+
+@media (max-width: 1024px) {
+  .gridItem {
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+}

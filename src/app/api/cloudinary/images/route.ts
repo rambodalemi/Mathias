@@ -1,86 +1,34 @@
-import { type NextRequest, NextResponse } from "next/server"
+import { NextRequest, NextResponse } from 'next/server';
+import { v2 as cloudinary } from 'cloudinary';
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
-    const maxResults = Number.parseInt(searchParams.get("max_results") || "20")
-    const nextCursor = searchParams.get("next_cursor")
-
-    const cloudName = process.env.CLOUDINARY_CLOUD_NAME
-    const apiKey = process.env.CLOUDINARY_API_KEY
-    const apiSecret = process.env.CLOUDINARY_API_SECRET
-
-    if (!cloudName || !apiKey || !apiSecret) {
-      return NextResponse.json(
-        {
-          resources: [],
-          error: "Cloudinary credentials are missing. Please check your environment variables.",
-        },
-        { status: 500 },
-      )
+    const { searchParams } = new URL(request.url);
+    const folder = searchParams.get('folder');
+    if (!folder) {
+      return NextResponse.json({ error: 'Missing folder parameter' }, { status: 400 });
     }
 
-    // Use Cloudinary Admin API with fetch instead of SDK
-    const url = `https://api.cloudinary.com/v1_1/${cloudName}/resources/image`
+    const { resources } = await cloudinary.search
+      .expression(`folder:${folder}/*`)
+      .sort_by('public_id', 'desc')
+      .max_results(100)
+      .execute();
 
-    const params = new URLSearchParams({
-      max_results: maxResults.toString(),
-      type: "upload",
-    })
+    const urls = resources.map((file: any) => ({
+      src: file.secure_url,
+      alt: file.public_id,
+      orientation: file.width > file.height ? "horizontal" : "vertical",
+    }));
 
-    if (nextCursor) {
-      params.append("next_cursor", nextCursor)
-    }
-
-    const auth = Buffer.from(`${apiKey}:${apiSecret}`).toString("base64")
-
-    const response = await fetch(`${url}?${params}`, {
-      method: "GET",
-      headers: {
-        Authorization: `Basic ${auth}`,
-        "Content-Type": "application/json",
-      },
-    })
-
-    if (!response.ok) {
-      const errorText = await response.text()
-      console.error("Cloudinary API error:", response.status, errorText)
-      return NextResponse.json(
-        {
-          resources: [],
-          error: `Cloudinary API error: ${response.status} - ${errorText}`,
-        },
-        { status: response.status },
-      )
-    }
-
-    const data = await response.json()
-
-    // Transform the response to match our expected format
-    const transformedResources = (data.resources || []).map((resource: any) => ({
-      public_id: resource.public_id,
-      secure_url: resource.secure_url,
-      width: resource.width,
-      height: resource.height,
-      format: resource.format,
-      bytes: resource.bytes,
-      created_at: resource.created_at,
-      tags: resource.tags || [],
-    }))
-
-    return NextResponse.json({
-      resources: transformedResources,
-      next_cursor: data.next_cursor,
-      total_count: data.resources?.length || 0,
-    })
+    return NextResponse.json(urls);
   } catch (error) {
-    console.error("API error:", error)
-    return NextResponse.json(
-      {
-        resources: [],
-        error: error instanceof Error ? error.message : "Failed to fetch images from Cloudinary",
-      },
-      { status: 500 },
-    )
+    return NextResponse.json({ error: 'Failed to fetch images' }, { status: 500 });
   }
 }

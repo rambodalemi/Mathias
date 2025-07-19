@@ -3,12 +3,18 @@
 import Masonry from "react-masonry-css";
 import { SmartImage } from "@/once-ui/components";
 import styles from "./Gallery.module.scss";
-import { gallery } from "@/app/resources/content";
+import useCloudinaryImages from "@/hooks/useCloudinaryImages";
 
-export default function MasonryGrid() {
+type MasonryGridProps = {
+  folder: string;
+};
+
+export default function MasonryGrid({ folder }: MasonryGridProps) {
+  const images = useCloudinaryImages(folder);
+
   const breakpointColumnsObj = {
     default: 2,
-    720: 1,
+    1024: 1,
   };
 
   return (
@@ -17,10 +23,10 @@ export default function MasonryGrid() {
       className={styles.masonryGrid}
       columnClassName={styles.masonryGridColumn}
     >
-      {gallery.images.map((image, index) => (
+      {images.map((image, index) => (
         <SmartImage
           priority={index < 10}
-          sizes="(max-width: 560px) 100vw, 50vw"
+          sizes="(max-width: 1024px) 100vw, 50vw"
           key={index}
           radius="m"
           aspectRatio={image.orientation === "horizontal" ? "16 / 11" : "3 / 4"}

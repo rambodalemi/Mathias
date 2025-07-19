@@ -49,14 +49,14 @@ export default function Gallery() {
         <br />
         Photographies : Christophe Mézières
       </Text>
-      <MasonryGrid />
+      <MasonryGrid folder="galerie_isabelle" />
 
       <Text variant="heading-default-xl">
         Galerie XXI en 2023
         <br />
         Michel Blachère
       </Text>
-      <MasonryGrid2 />
+      <MasonryGrid2 folder="Galerie_XXI" />
     </Flex>
   );
 }
