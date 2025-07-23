@@ -49,6 +49,7 @@ export default function Gallery() {
         <br />
         Photographies : Christophe Mézières
       </Text>
+      
       <MasonryGrid folder="galerie_isabelle" />
 
       <Text variant="heading-default-xl">

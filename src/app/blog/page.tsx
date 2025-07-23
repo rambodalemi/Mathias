@@ -31,16 +31,7 @@ export default function Blog() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Heading marginBottom="l" variant="display-strong-s">
-        {blog.title}
-      </Heading>
-      <iframe
-        src="/files/respconsp.pdf"
-        width="100%"
-        height="600px"
-        style={{ border: "none", margin: "2rem 0" }}
-        title="respconsp.pdf"
-      />
+
       <Column
         fillWidth flex={1}>
         <Posts range={[1, 1]} thumbnail direction="column" />

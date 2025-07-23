@@ -9,6 +9,7 @@ import { Mailchimp } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
 import Image from "next/image";
+import Link from "next/link";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -111,8 +112,41 @@ export default function Home() {
             allowFullScreen
           />
           <div className="absolute inset-0 z-10" />
+          <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
+            Michel Butor
+          </Heading>
         </div>
       </Flex>
+      <Flex
+        background="neutral-alpha-weak"
+        padding="24"
+        radius="l"
+        gap="16"
+        direction="column"
+        horizontal="center"
+      >
+        <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/IGiQp5UaJWc?si=7wThQGpRXLjz2XhD"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+          <div className="absolute inset-0 z-10" />
+          <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
+            Hubert Lucot
+          </Heading>
+        </div>
+      </Flex>
+      <Link href="/files/respconsp.pdf">
+        <Image src="/images/gallery/123.png" alt="Livre" width={300} height={300} />
+        <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
+          Cliquez pour voir le livre
+        </Heading>
+      </Link>
       <Projects range={[1, 1]} />
       <Flex
         background="neutral-alpha-weak"
@@ -158,6 +192,14 @@ export default function Home() {
         <Text onBackground="neutral-weak" variant="body-default-m">
           Entretien de Mathias Pérez avec Marc Pataut et Bernard Noël
         </Text>
+        <Button
+          href="/files/Entretien-bn.pdf"
+          variant="secondary"
+          size="m"
+          data-border="rounded"
+        >
+          Voir L'entretien en PDF
+        </Button>
       </Flex>
       <Flex
         background="brand-alpha-weak"

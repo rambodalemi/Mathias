@@ -12,6 +12,8 @@ type MasonryGrid2Props = {
 export default function MasonryGrid2({ folder }: MasonryGrid2Props) {
   const images = useCloudinaryImages(folder);
 
+  const safeImages = Array.isArray(images) ? images : [];
+
   const breakpointColumnsObj = {
     default: 2,
     1024: 1,
@@ -23,7 +25,7 @@ export default function MasonryGrid2({ folder }: MasonryGrid2Props) {
       className={styles.masonryGrid}
       columnClassName={styles.masonryGridColumn}
     >
-      {images.map((image, index) => (
+      {safeImages.map((image, index) => (
         <SmartImage
           priority={index < 10}
           sizes="(max-width: 1024px) 100vw, 50vw"
