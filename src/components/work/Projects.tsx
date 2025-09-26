@@ -4,9 +4,10 @@ import { ProjectCard } from "@/components";
 
 interface ProjectsProps {
   range?: [number, number?];
+  text?: string
 }
 
-export function Projects({ range }: ProjectsProps) {
+export function Projects({ range, text }: ProjectsProps) {
   let allProjects = getPosts(["src", "app", "work", "projects"]);
 
   const sortedProjects = allProjects.sort((a, b) => {
@@ -30,6 +31,7 @@ export function Projects({ range }: ProjectsProps) {
           content={post.content}
           avatars={post.metadata.team?.map((member) => ({ src: member.avatar })) || []}
           link={post.metadata.link || ""}
+          text={text}
         />
       ))}
     </Column>

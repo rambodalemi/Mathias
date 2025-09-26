@@ -19,6 +19,7 @@ interface ProjectCardProps {
   description?: string;
   avatars?: { src: string }[];
   link?: string;
+  text?: string
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -29,9 +30,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   avatars,
   link,
+  text,
 }) => {
   return (
     <Column fillWidth gap="m">
+      <Text variant="heading-default-xl">
+        {text}
+      </Text>
       <Carousel
         sizes="(max-width: 960px) 100vw, 960px"
         images={images.map((image) => ({

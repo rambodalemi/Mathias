@@ -10,6 +10,7 @@ import { Posts } from "@/components/blog/Posts";
 import { Meta, Schema } from "@/once-ui/modules";
 import Image from "next/image";
 import Link from "next/link";
+import MasonryGrid2025 from "@/components/gallery/MasonryGrid2025";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -65,7 +66,11 @@ export default function Home() {
           </Button>
         </Column>
       </Column>
-      <Projects range={[2]} />
+      <Projects text="1981 à Rome" range={[2]} />
+      <Text variant="heading-default-xl">
+        2025 à Auvers-sur-Oise
+      </Text>
+      <MasonryGrid2025 folder="2025" />
       <Flex
         background="neutral-alpha-weak"
         padding="24"

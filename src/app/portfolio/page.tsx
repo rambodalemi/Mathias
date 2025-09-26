@@ -4,6 +4,7 @@ import { baseURL } from "@/app/resources";
 import { gallery, person } from "@/app/resources/content";
 import { Meta, Schema } from "@/once-ui/modules";
 import MasonryGrid2 from "@/components/gallery/MasonryGrid2";
+import MasonryGrid2025 from "@/components/gallery/MasonryGrid2025";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -49,7 +50,7 @@ export default function Gallery() {
         <br />
         Photographies : Christophe Mézières
       </Text>
-      
+
       <MasonryGrid folder="galerie_isabelle" />
 
       <Text variant="heading-default-xl">
@@ -58,6 +59,13 @@ export default function Gallery() {
         Michel Blachère
       </Text>
       <MasonryGrid2 folder="Galerie_XXI" />
+
+      <Text variant="heading-default-xl">
+        à Auvers-sur-Oise
+        <br />
+        2025
+      </Text>
+      <MasonryGrid2025 folder="2025" />
     </Flex>
   );
 }
