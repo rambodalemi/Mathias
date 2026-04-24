@@ -67,6 +67,12 @@ export default function Home() {
         </Column>
       </Column>
       <Projects text="1981 à Rome" range={[2]} />
+      <Link href="/files/Joncaille_Tugny_Perez_vfinale.pdf">
+        <Image src="/images/gallery/livre2.png" alt="Livre" width={300} height={300} />
+        <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
+          Cliquez pour voir le livre
+        </Heading>
+      </Link>
       <Text variant="heading-default-xl">
         2025 à Auvers-sur-Oise
       </Text>
@@ -78,16 +84,16 @@ export default function Home() {
         gap="16"
         direction="column"
         horizontal="center"
+        style={{ width: "100%", maxWidth: "100%" }}
       >
-        <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+        <div className="relative w-full rounded-md overflow-hidden mt-24" style={{ paddingBottom: "56.25%" }}>
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/N4lRCsGrhfQ"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
           />
           <div className="absolute inset-0 z-10" />
           <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
@@ -105,16 +111,16 @@ export default function Home() {
         gap="16"
         direction="column"
         horizontal="center"
+        style={{ width: "100%", maxWidth: "100%" }}
       >
-        <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+        <div className="relative w-full rounded-md overflow-hidden mt-24" style={{ paddingBottom: "56.25%" }}>
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/cea4JDUMmcY?si=er0WgBx-CSwhdvo7"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
           />
           <div className="absolute inset-0 z-10" />
           <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
@@ -129,16 +135,16 @@ export default function Home() {
         gap="16"
         direction="column"
         horizontal="center"
+        style={{ width: "100%", maxWidth: "100%" }}
       >
-        <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+        <div className="relative w-full rounded-md overflow-hidden mt-24" style={{ paddingBottom: "56.25%" }}>
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/IGiQp5UaJWc?si=7wThQGpRXLjz2XhD"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
           />
           <div className="absolute inset-0 z-10" />
           <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
@@ -168,8 +174,8 @@ export default function Home() {
           src="/images/gallery/Pataut_Noël.JPG"
           alt="Pataut"
           width={1600}
-          height={700}
-        />
+          height={700}          sizes="(max-width: 768px) 100vw, 90vw"
+          style={{ width: "100%", height: "auto" }}        />
       </Flex>
       <Flex
         background="neutral-alpha-weak"
@@ -178,16 +184,16 @@ export default function Home() {
         gap="16"
         direction="column"
         horizontal="center"
+        style={{ width: "100%", maxWidth: "100%" }}
       >
-        <div className="relative w-full aspect-video rounded-md overflow-hidden mt-24">
+        <div className="relative w-full rounded-md overflow-hidden mt-24" style={{ paddingBottom: "56.25%" }}>
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/i_DtqeGcaKM?si=6m_Lyr-4sRlQzkpw"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
+            style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
           />
           <div className="absolute inset-0 z-10" />
           <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">

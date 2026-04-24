@@ -38,9 +38,15 @@ const SmartImage: React.FC<SmartImageProps> = ({
   const [isEnlarged, setIsEnlarged] = useState(false);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  const handleClick = () => {
+  const handleImageClick = () => {
     if (enlarge) {
-      setIsEnlarged(!isEnlarged);
+      setIsEnlarged(true);
+    }
+  };
+
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (enlarge && isEnlarged && e.target === e.currentTarget) {
+      setIsEnlarged(false);
     }
   };
 
@@ -57,12 +63,20 @@ const SmartImage: React.FC<SmartImageProps> = ({
       }
     };
 
+    const handleTouchMove = (event: TouchEvent) => {
+      if (isEnlarged) {
+        setIsEnlarged(false);
+      }
+    };
+
     document.addEventListener("keydown", handleEscape);
     window.addEventListener("wheel", handleWheel, { passive: true });
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     return () => {
       document.removeEventListener("keydown", handleEscape);
       window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, [isEnlarged]);
 
@@ -132,7 +146,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
           borderRadius: isEnlarged ? "0" : undefined,
           ...calculateTransform(),
         }}
-        onClick={handleClick}
+        onClick={handleImageClick}
         {...rest}
       >
         {isLoading && <Skeleton shape="block" />}
@@ -200,8 +214,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
           vertical="center"
           position="fixed"
           background="overlay"
-          pointerEvents="none"
-          onClick={handleClick}
+          onClick={handleOverlayClick}
           top="0"
           left="0"
           zIndex={isEnlarged ? 9 : undefined}
@@ -218,6 +231,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
             style={{
               height: "100vh",
               transform: "translate(-50%, -50%)",
+              pointerEvents: "auto",
             }}
             onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
           >

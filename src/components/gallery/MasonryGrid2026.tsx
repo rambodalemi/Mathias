@@ -5,11 +5,11 @@ import { SmartImage } from "@/once-ui/components";
 import styles from "./Gallery.module.scss";
 import useCloudinaryImages from "@/hooks/useCloudinaryImages";
 
-type MasonryGrid2025Props = {
+type MasonryGrid2026Props = {
   folder: string;
 };
 
-export default function MasonryGrid2025({ folder }: MasonryGrid2025Props) {
+export default function MasonryGrid2026({ folder }: MasonryGrid2026Props) {
   const images = useCloudinaryImages(folder);
 
   const safeImages = Array.isArray(images) ? images : [];

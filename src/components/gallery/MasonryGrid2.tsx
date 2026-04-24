@@ -16,7 +16,10 @@ export default function MasonryGrid2({ folder }: MasonryGrid2Props) {
 
   const breakpointColumnsObj = {
     default: 2,
-    1024: 1,
+    1024: 2,
+    768: 2,
+    640: 2,
+    480: 1,
   };
 
   return (
@@ -35,6 +38,7 @@ export default function MasonryGrid2({ folder }: MasonryGrid2Props) {
           src={image.src}
           alt={image.alt}
           className={styles.gridItem}
+          enlarge={true}
         />
       ))}
     </Masonry>
