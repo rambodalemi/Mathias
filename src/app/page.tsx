@@ -209,6 +209,7 @@ export default function Home() {
           size="m"
           data-border="rounded"
         >
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           Voir L'entretien en PDF
         </Button>
       </Flex>
