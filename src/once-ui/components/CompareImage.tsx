@@ -79,7 +79,7 @@ export const CompareImage = ({ leftContent, rightContent, ...rest }: CompareImag
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleMouseUp);
     };
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Flex

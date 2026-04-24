@@ -52,6 +52,7 @@ export default function Gallery() {
         Galerie de Mathias Perez
       </Text>
       <Text variant="body-default-m" style={{ marginBottom: "2rem", opacity: 0.7 }}>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         Cliquez sur une image pour l'agrandir
       </Text>
 

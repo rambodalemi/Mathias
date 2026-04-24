@@ -409,7 +409,7 @@ export const Kbar: React.FC<KbarProps> = ({ items, children, ...rest }) => {
     if (isOpen) {
       handleClose();
     }
-  }, [pathname]);
+  }, [pathname]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Add keyboard shortcut listener
   useEffect(() => {
