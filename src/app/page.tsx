@@ -66,7 +66,7 @@ export default function Home() {
           </Button>
         </Column>
       </Column>
-      <Projects text="1981 à Rome" range={[2]} />
+      <Projects text="Galerie Isabelle Mézières en 2014 (Tableau fabriqué à Rome, Villa Médicis)." range={[2]} />
       <Link href="/files/Joncaille_Tugny_Perez_vfinale.pdf">
         <Image src="/images/gallery/livre2.png" alt="Livre" width={300} height={300} />
         <Heading align="center" wrap="balance" onBackground="neutral-weak" variant="body-strong-xl">
